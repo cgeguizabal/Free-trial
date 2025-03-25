@@ -59,7 +59,7 @@ function Form() {
   };
 
   return (
-    <>
+    <div className="form__wrapper">
       <form className="form__container" onSubmit={handleSubmit(onSubmit)}>
         <div>
           <div
@@ -189,7 +189,7 @@ function Form() {
           <span>Terms and Services</span>
         </p>
       </form>
-    </>
+    </div>
   );
 }
 
