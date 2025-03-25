@@ -1,0 +1,23 @@
+@import "../abstracts/variable.scss";
+
+*,
+*::after,
+*::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  background-image: url("public/bg-intro-desktop.png");
+  background-color: $color-red;
+  background-size: cover;
+  background-position: start;
+  background-repeat: repeat;
+  background-attachment: fixed;
+  min-height: 100vh;
+}

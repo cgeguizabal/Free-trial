@@ -1,0 +1,23 @@
+.contentRight {
+  &__container {
+    flex: 0 0 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__button {
+    background-color: $color-blue;
+    color: white;
+    padding: 1.8rem 13.8rem;
+    border: none;
+    border-radius: 1rem;
+    font-size: 1.4rem;
+    box-shadow: $shadow-box;
+    margin-bottom: 3rem;
+
+    &-span {
+      font-weight: 700;
+    }
+  }
+}

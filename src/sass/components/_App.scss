@@ -1,0 +1,10 @@
+.app {
+  &__container {
+    display: flex;
+    max-width: 110rem;
+
+    margin: 8rem auto;
+    justify-content: space-around;
+    min-height: 55rem;
+  }
+}

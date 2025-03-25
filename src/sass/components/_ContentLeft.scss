@@ -1,0 +1,19 @@
+.contentLeft {
+  &__container {
+    flex: 0 0 50%;
+    align-content: center;
+    padding: 0 2.4rem;
+    margin-right: 2rem;
+  }
+
+  &__title {
+    color: white;
+    font-size: 5rem;
+    line-height: 4.8rem;
+    margin-bottom: 3.2rem;
+  }
+
+  &__paragraph {
+    color: white;
+  }
+}

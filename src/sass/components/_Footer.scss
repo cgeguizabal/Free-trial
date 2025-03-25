@@ -1,0 +1,10 @@
+@import "../abstracts/variable.scss";
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  transform: translateY(-2.5rem);
+}
+.attribution a {
+  color: $color-dark-blue;
+}

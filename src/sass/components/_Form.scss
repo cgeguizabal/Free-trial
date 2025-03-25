@@ -1,0 +1,90 @@
+.form {
+  &__container {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    background-color: white;
+    padding: 2.5rem;
+    border-radius: 1rem;
+    box-shadow: $shadow-box;
+  }
+
+  &__inputContainer {
+    padding: 1em 1.5rem;
+    border-radius: 0.5rem;
+    border: 1.5px solid $color-gray-blue;
+    outline: none;
+    min-width: 100%;
+    position: relative;
+
+    &:focus-within {
+      border: 2px solid $color-dark-blue;
+    }
+  }
+
+  &__input {
+    background: transparent;
+    border: none;
+    outline: none;
+    min-width: 40rem;
+
+    &-error {
+      padding: 1em 1.5rem;
+      border-radius: 0.5rem;
+      border: 1.5px solid $color-red;
+      border-radius: 0.5rem;
+      outline: none;
+    }
+  }
+
+  &__button {
+    text-align: center;
+    background-color: $color-green;
+    color: white;
+    padding: 2rem 8.7em;
+    border: none;
+    border-radius: 0.5rem;
+    font-size: 1.6rem;
+    box-shadow: 0 -0.5rem 0 0 rgba(0, 0, 0, 0.1) inset;
+    text-transform: uppercase;
+    letter-spacing: 0.2rem;
+    transition: all 0.2s;
+
+    &:hover {
+      background-color: lighten($color-green, 15%);
+      cursor: pointer;
+      transform: scale(102%);
+    }
+
+    &:active {
+      transform: translateY(0.1rem);
+    }
+  }
+
+  &__text {
+    text-align: center;
+    font-size: 1rem;
+    & span {
+      color: $color-red;
+      font-weight: 600;
+    }
+  }
+}
+
+.error-icon {
+  position: absolute;
+  transform: translateX(4rem);
+}
+
+.error-placeholder::placeholder {
+  color: $color-red;
+  font-weight: 500;
+}
+.error {
+  color: $color-red;
+  text-align: end;
+  font-size: 1rem;
+  font-style: italic;
+  font-weight: 500;
+  margin-top: 1rem;
+}
