@@ -1,4 +1,7 @@
 @media (max-width: 56.25em) {
+  .app__container {
+    flex-wrap: wrap;
+  }
   .contentLeft {
     &__container {
       text-align: center;
@@ -23,9 +26,6 @@
     }
   }
 
-  .app__container {
-    flex-wrap: wrap;
-  }
   .form {
     &__container {
       width: 40rem;
@@ -35,6 +35,13 @@
     &__button {
       font-size: 1rem;
       margin-left: 1rem;
+    }
+  }
+
+  .contentRight {
+    &__button {
+      font-size: 1.4rem;
+      line-height: 2rem;
     }
   }
 }

@@ -9,12 +9,13 @@
   &__button {
     background-color: $color-blue;
     color: white;
-    padding: 1.8rem 13.8rem;
+    padding: 1.8rem 13rem;
     border: none;
     border-radius: 1rem;
     font-size: 1.4rem;
     box-shadow: $shadow-box;
     margin-bottom: 3rem;
+    min-width: 330px;
 
     &-span {
       font-weight: 700;
