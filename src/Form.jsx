@@ -22,13 +22,14 @@ export function Form() {
   return (
     <div className="form__wrapper">
       <form className="form__container" onSubmit={handleSubmit(onSubmit)}>
+        {/* Name Input */}
         <div>
           <div
-            className={
+            className={`form__inputContainer ${
               errors.firstname || submission === false
-                ? "form__input-error"
-                : "form__inputContainer"
-            }
+                ? "form__inputContainer--error"
+                : ""
+            }`}
           >
             <input
               type="text"
@@ -39,24 +40,22 @@ export function Form() {
               })}
             />
             {errors.firstname && (
-              <img
-                src="icon-error.svg"
-                alt="Error icon"
-                className="error-icon"
-              />
+              <img src="icon-error.svg" alt="Error" className="error-icon" />
             )}
           </div>
           {errors.firstname && (
             <p className="error">{errors.firstname.message}</p>
           )}
         </div>
+
+        {/* Last Name Input */}
         <div>
           <div
-            className={
+            className={`form__inputContainer ${
               errors.lastname || submission === false
-                ? "form__input-error"
-                : "form__inputContainer"
-            }
+                ? "form__inputContainer--error"
+                : ""
+            }`}
           >
             <input
               type="text"
@@ -67,24 +66,22 @@ export function Form() {
               })}
             />
             {errors.lastname && (
-              <img
-                src="icon-error.svg"
-                alt="Error icon"
-                className="error-icon"
-              />
+              <img src="icon-error.svg" alt="Error" className="error-icon" />
             )}
           </div>
           {errors.lastname && (
             <p className="error">{errors.lastname.message}</p>
           )}
         </div>
+
+        {/* Email Input */}
         <div>
           <div
-            className={
+            className={`form__inputContainer ${
               errors.email || submission === false
-                ? "form__input-error"
-                : "form__inputContainer"
-            }
+                ? "form__inputContainer--error"
+                : ""
+            }`}
           >
             <input
               type="text"
@@ -104,46 +101,41 @@ export function Form() {
                 },
               })}
             />
-            {errors.lastname && (
-              <img
-                src="icon-error.svg"
-                alt="Error icon"
-                className="error-icon"
-              />
+            {errors.email && (
+              <img src="icon-error.svg" alt="Error" className="error-icon" />
             )}
           </div>
           {errors.email && <p className="error">{errors.email.message}</p>}
         </div>
+
+        {/* Password Input */}
         <div>
           <div
-            className={
+            className={`form__inputContainer ${
               errors.password || submission === false
-                ? "form__input-error"
-                : "form__inputContainer"
-            }
+                ? "form__inputContainer--error"
+                : ""
+            }`}
           >
             <input
-              type="text"
+              type="password" // Changed to password type
               placeholder="Password"
               className="form__input"
               {...register("password", {
-                required: "Password cannot be Empty",
+                required: "Password cannot be empty",
               })}
             />
-            {errors.lastname && (
-              <img
-                src="icon-error.svg"
-                alt="Error icon"
-                className="error-icon"
-              />
+            {errors.password && (
+              <img src="icon-error.svg" alt="Error" className="error-icon" />
             )}
           </div>
           {errors.password && (
             <p className="error">{errors.password.message}</p>
           )}
         </div>
+
         <Button kind="submit" style="form__button">
-          Claim your free trial{" "}
+          Claim your free trial
         </Button>
         <p className="form__text">
           By clicking the button, you are agreeing to our{" "}

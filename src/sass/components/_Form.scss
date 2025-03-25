@@ -10,12 +10,22 @@
   }
 
   &__inputContainer {
+    position: relative;
     padding: 1em 1.5rem;
     border-radius: 0.5rem;
     border: 1.5px solid $color-gray-blue;
     outline: none;
-    min-width: 100%;
-    position: relative;
+    width: 100%;
+    display: flex;
+    align-items: center;
+
+    &--error {
+      padding: 1em 1.5rem;
+
+      border: 1.5px solid $color-red !important;
+      border-radius: 0.5rem;
+      outline: none;
+    }
 
     &:focus-within {
       border: 2px solid $color-dark-blue;
@@ -26,15 +36,8 @@
     background: transparent;
     border: none;
     outline: none;
-    min-width: 40rem;
-
-    &-error {
-      padding: 1em 1.5rem;
-      border-radius: 0.5rem;
-      border: 1.5px solid $color-red;
-      border-radius: 0.5rem;
-      outline: none;
-    }
+    width: 100%;
+    padding-right: 2.5rem;
   }
 
   &__button {
@@ -73,7 +76,12 @@
 
 .error-icon {
   position: absolute;
-  transform: translateX(2rem);
+  right: 1.5rem;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 20px;
+  height: 20px;
+  pointer-events: none;
 }
 
 .error-placeholder::placeholder {
